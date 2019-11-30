@@ -1,1 +1,1 @@
-# python + selenium + unittest 测试项目
+# python + selenium + unittest 的 WebUI 测试项目
