@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author : abcnull
+# @Time : 2019/12/2 17:37
+# @E-Mail : abcnull@qq.com
+# @CSDN : abcnull
+# @GitHub : abcnull
+
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from common.browser_common import BrowserCommon
@@ -7,7 +15,6 @@ from common.browser_common import BrowserCommon
 class PageCommon(BrowserCommon):
 
     ############################## 基本方法再封装 ##############################
-
     # 依据 xpath 找到指定元素
     def find_element_by_xpath(self, xpath):
         """
@@ -45,7 +52,6 @@ class PageCommon(BrowserCommon):
         return self.driver.find_elements(*args)
 
     ############################## 单个元素操作 ##############################
-
     # 点击元素
     def click_element(self, xpath):
         """

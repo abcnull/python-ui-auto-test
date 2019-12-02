@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author : abcnull
+# @Time : 2019/12/2 17:37
+# @E-Mail : abcnull@qq.com
+# @CSDN : abcnull
+# @GitHub : abcnull
+
 import configparser
 import os
 
@@ -13,8 +21,8 @@ class ConfigReader:
         """
         # 配置文件路径
         self.config_absolute_path = os.path.abspath(os.path.dirname(__file__))[
-                                    :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test\\") + len(
-                                        "python-ui-auto-test\\")] + 'ui-test/resource/config/config.ini'
+                                    :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test") + len(
+                                        "python-ui-auto-test")] + '/ui-test/resource/config/config.ini'
         # 创建配置文件管理者
         self.config_manager = configparser.ConfigParser()
         # 以 utf-8 编码方式读取配置文件
@@ -29,5 +37,5 @@ class ConfigReader:
 
 # 检测 config 配置文件读取器
 if __name__ == "__main__":
-    # 输出 [driver_path] 中的数据
-    print(ConfigReader().read("driver_path"))
+    # 输出 [driver] 中的数据
+    print(ConfigReader().read("driver"))

@@ -4,4 +4,4 @@ class CsdnData:
     url = "https://blog.csdn.net/abcnull"
 
     # csdn 句柄网址
-    handle_url = "https://blog.csdn.net/abcnull/category_7435308.html"
+    handle_url = "https://blog.csdn.net/abcnull"

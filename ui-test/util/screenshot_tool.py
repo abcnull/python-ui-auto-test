@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author : abcnull
+# @Time : 2019/12/2 17:37
+# @E-Mail : abcnull@qq.com
+# @CSDN : abcnull
+# @GitHub : abcnull
+
 import os
 from util.config_reader import ConfigReader
 
@@ -13,13 +21,14 @@ class ScreenshotTool:
         :return: 新的截图名
         """
         # 图片绝对路径
-        img_path = r"" + os.path.abspath(os.path.dirname(__file__))[
-                         :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test\\") + len(
-                             "python-ui-auto-test\\")] + "ui-test" + ConfigReader().read("screenshot")["shotfile_path"]
+        img_path = os.path.abspath(os.path.dirname(__file__))[
+                   :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test") + len(
+                       "python-ui-auto-test")] + "/ui-test" + ConfigReader().read("screenshot")["shotfile_path"]
         # 获取新的图片名
         new_img_name = self.get_img_name(img_name)
         # 根据配置文件的配置，截图智能存放
-        driver.get_screenshot_as_file(("{}/{}" + ConfigReader().read("screenshot")["shot_format"]).format(img_path, new_img_name))
+        driver.get_screenshot_as_file(
+            ("{}/{}" + ConfigReader().read("screenshot")["shot_format"]).format(img_path, new_img_name))
         # 由于可配置是否允许图片被覆盖，这里返回的是图片新名字
         return new_img_name
 
@@ -32,9 +41,9 @@ class ScreenshotTool:
         :return: 新的截图名
         """
         # 图片绝对路径
-        img_path = r"" + os.path.abspath(os.path.dirname(__file__))[
-                         :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test\\") + len(
-                             "python-ui-auto-test\\")] + "ui-test" + ConfigReader().read("screenshot")["shotfile_path"]
+        img_path = os.path.abspath(os.path.dirname(__file__))[
+                   :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test") + len(
+                       "python-ui-auto-test")] + "/ui-test" + ConfigReader().read("screenshot")["shotfile_path"]
         # 判断同名截图是否支持覆盖，若支持覆盖同名图片
         if ConfigReader().read("screenshot")["cover_allowed"].upper() == "Y":
             # 返回截图名字

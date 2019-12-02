@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author : abcnull
+# @Time : 2019/12/2 17:37
+# @E-Mail : abcnull@qq.com
+# @CSDN : abcnull
+# @GitHub : abcnull
+
 import time
 
 
@@ -13,6 +21,8 @@ class BrowserCommon(object):
             self.driver = driver
         else:
             raise RuntimeError("页面类初始化驱动必传！")
+        # 窗口最大化
+        self.driver.maximize_window()
         # 设置 20 s 隐式等待
         self.driver.implicitly_wait(20)
 

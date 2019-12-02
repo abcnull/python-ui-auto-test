@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Author : abcnull
+# @Time : 2019/12/2 17:37
+# @E-Mail : abcnull@qq.com
+# @CSDN : abcnull
+# @GitHub : abcnull
+
 import logging.config
 import os
 from util.config_reader import ConfigReader
@@ -18,8 +26,8 @@ id_simple_format = '[%(levelname)s][%(asctime)s] %(message)s'
 # 输出日志的名字和绝对路径
 logfile_name = ConfigReader().read('log')['logfile_name']  # log文件名
 logfile_path_staff = r'' + os.path.abspath(os.path.dirname(__file__))[
-                           :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test\\") + len(
-                               "python-ui-auto-test\\")] + "ui-test" + ConfigReader().read('log')[
+                           :os.path.abspath(os.path.dirname(__file__)).find("python-ui-auto-test") + len(
+                               "python-ui-auto-test")] + "/ui-test" + ConfigReader().read('log')[
                          'logfile_path'] + logfile_name
 
 # 打到终端的日志级别和格式
