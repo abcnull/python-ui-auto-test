@@ -1,4 +1,4 @@
-**[English]() | [博客](https://blog.csdn.net/abcnull/article/details/103379143)**
+**[English](https://github.com/abcnull/python-ui-auto-test/blob/master/README_en.md) | [博客](https://blog.csdn.net/abcnull/article/details/103379143)**
 
 [TOC]
 # python-ui-auto-test
