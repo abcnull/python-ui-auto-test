@@ -5,8 +5,6 @@
 
 python + selenium + unittest + PO + BeautifulReport + redis + mysql + ParamUnittest + 多线程 + 截图/日志 + 多浏览器支持 + RemoteWebDriver +文件读取 + 全参数化构建
 
-搭建过程中非常感谢李鹏飞大侠的技术支持！后续有问题请在如下途径私聊联系！
-
 欢迎大家 **Watch**，**Star** 和 **Fork**！
 
 - 框架作者：**abcnull**
